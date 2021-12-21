@@ -1,3 +1,7 @@
+
+
+
+
 npm install –save-dev sassbody {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -7,10 +11,31 @@ npm install –save-dev sassbody {
   -moz-osx-font-smoothing: grayscale;
 }
 
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-body{
-  background-color: red;
+* {
+  box-sizing: border-box;
 }
+
+body {
+  font-family: Ubuntu;
+  background-color: cornflowerblue;
+
+}
+
+a {
+  text-decoration: none;
+  font-size: 30px;
+}
+
+
+
+.container {
+  width: 1352px;
+  margin: 0 auto;
+
+}
+
