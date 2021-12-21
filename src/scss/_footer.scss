@@ -1,0 +1,32 @@
+.footer {
+  box-shadow: 0 -5px 40px #00000029;
+  padding: 100px 0;
+  margin: 100px 0;
+  background-color: $footer-background-color;
+   a:hover {
+    background-color: #ddd;
+
+  }
+
+
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  &-copy {
+    font-size: 0.6875rem;
+    line-height: 1.5rem;
+    color: grey;
+    margin-top: 6px;
+  }
+
+
+}
