@@ -1,3 +1,6 @@
+@import "./colors.scss";
+@import "./fonts.scss";
+
 .footer {
   box-shadow: 0 -5px 40px #00000029;
   padding: 100px 0;
@@ -5,8 +8,16 @@
   background-color: $footer-background-color;
    a:hover {
     background-color: #ddd;
+  }
+  @media screen and (max-width: 792px) {
+    .footer-icons {
+      float: none;
+      display: block;
+      text-align: right;
+    }
 
   }
+
 
 
   &-container {
@@ -15,11 +26,14 @@
     align-items: center;
   }
 
+
   &-info {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+
   }
+
 
   &-copy {
     font-size: 0.6875rem;
@@ -27,6 +41,11 @@
     color: grey;
     margin-top: 6px;
   }
-
+  //.footer-icons a {
+  //  :first-of-type{
+  //    background-image: url("public/github.svg");
+  //  }
 
 }
+
+

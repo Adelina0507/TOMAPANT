@@ -1,13 +1,14 @@
 @use "sass:math";
+@import "./colors.scss";
+@import "./fonts.scss";
+
 $columns: 8;
 $col-width:math.div(100%,$columns);
 main {
 
   padding: 150px 150px 150px 150px;
   margin: 0px;
-  @media screen and (max-width: 792px) {
-    flex-wrap: wrap;
-  }
+
 
 
 
@@ -20,6 +21,9 @@ main {
     padding: 10px;
     background-size: 100%;
     text-align: center;
+    //@media screen and (max-width: 792px) {
+    //  flex-wrap: wrap;
+    //}
 
 
     .col-1{
