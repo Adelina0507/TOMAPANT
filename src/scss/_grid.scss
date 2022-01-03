@@ -17,8 +17,10 @@ main {
   .grid-container {
    float: left;
     display: inline-grid;
-    height: 200px;
+    height: 100%;
+    width: 100%;
     padding: 10px;
+    margin: 10px;
     background-size: 100%;
     text-align: center;
     //@media screen and (max-width: 792px) {
