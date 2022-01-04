@@ -4,7 +4,7 @@
 .footer {
 
    a:hover {
-    background-color: #ddd;
+
   }
   &-container {
     display: flex;
@@ -15,12 +15,13 @@
     height: 100px;
     width: 100%;
     padding: 100px;
-    margin-top: 200px;
+    margin-top: 500px;
     @media screen and (max-width: 792px) {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+
       .footer-icons {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
 
       }
 

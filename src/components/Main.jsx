@@ -24,7 +24,7 @@ export function Main() {
     return(
         <main>
             <button style={{height: "50px", width:"100px", backgroundColor:"green", float:"left"}} onClick={handleClick}>Add Row</button>
-            <button style={{height: "50px", width:"100px", backgroundColor:"red", float:"right"}} onClick={DeleteRow}>Delete Row</button>
+            <button style={{height: "50px", width:"100px", backgroundColor:"red", float:"left"}} onClick={DeleteRow}>Delete Row</button>
             {/*<div className="grid-container">*/}
             {/*    <div className="col-1">Ț</div>*/}
             {/*    <div className="col-1">O</div>*/}
