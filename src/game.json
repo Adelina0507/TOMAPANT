@@ -4,13 +4,13 @@
       "id": 1,
       "letter": "A",
       "country": "Armenia",
-      "Oraș": "Arad",
-      "Munte": "Apuseni",
-      "Ape": "Arges",
-      "Plante":"Afin",
-      "Animal":"Arici",
-      "Nume":"Ana",
-      "Total": 100
+      "town": "Arad",
+      "mountain": "Apuseni",
+      "water": "Arges",
+      "plant":"Afin",
+      "animal":"Arici",
+      "name":"Ana",
+      "total": 100
 
     }
 
