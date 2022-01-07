@@ -21,8 +21,10 @@ code {
 }
 
 body {
-  font-family: Ubuntu;
-  background-color: cornflowerblue;
+  font-family:"Cursive";
+  font-size: 2em;
+  background-color: rgb(230, 95, 95);
+  box-shadow: 0 -5px 40px #00000029;
 
 }
 
@@ -39,3 +41,23 @@ a {
 
 }
 
+button{
+  background-color: #4c89af;
+  border: none;
+  border-radius: 10px;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: 'Roboto';
+}
+input{
+  background-color: #c9ebeb;
+  height: 25px;
+  width: 220px;
+  padding: 5px;
+  margin: 1px;
+  border: 2px solid deepskyblue;
+}

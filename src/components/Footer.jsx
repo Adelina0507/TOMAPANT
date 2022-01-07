@@ -8,8 +8,8 @@ export function Footer() {
         <footer className="footer">
             <div className="footer-container container">
                 <div className="footer-info">
-                    <a href="#" className="logo">ȚOMAPANT</a>
-                    <span className="footer-copy">©proiect Ejobs 2021 </span>
+                    <a href="#" className="footer-logo">ȚOMAPANT</a>
+                    <span className="footer-copy">©proiect Ejobs 2022 </span>
                 </div>
                 <div className="footer-icons">
                     <a href="https://github.com/Adelina0507"><img src="github.svg" alt="github"/></a>
