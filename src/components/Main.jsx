@@ -22,13 +22,14 @@ export function Main() {
 
     return(
         <main>
+
             <div>
                 <input type={"text"} name={"player"} value={player} onChange={(event => setPlayer(event.target.value))}/>
             </div>
             <button onClick={handleClick}>Add Row</button>
 
             <div className="grid-container">
-                <div className="index">#</div>
+                {/*<div className="index">#</div>*/}
                 <div className="row">Ț</div>
                 <div className="row">O</div>
                 <div className="row">M</div>

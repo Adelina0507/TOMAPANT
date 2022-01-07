@@ -6,7 +6,8 @@ export function Header(){
     return(
         <header className="page-header">
             <div className="header">
-                <a href="#default" className="logo">ȚOMAPANT</a>
+                <h1 className="logo">ȚOMAPANT</h1>
+                <p className="logo">A childhood's game</p>
 
             </div>
         </header>

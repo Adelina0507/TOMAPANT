@@ -25,31 +25,20 @@
 }
 
 
-.header a.logo {
+.header {
   font-size: 25px;
   font-family: $logo-font;
   color: $logo-color;
-  letter-spacing: 0.3rem;
+  letter-spacing: 0.1rem;
   transition-duration: 2s;
   margin: 20px;
   padding: 20px;
-}
+
+  //.logo h1{
+  //  color: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+  //}
 
 
-.header a:hover {
-  color: black;
-  transform: scale(1.5);
-
-}
 
 
-@media screen and (max-width: 792px) {
-  .header a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-  .header-right {
-    float: none;
-  }
 }
