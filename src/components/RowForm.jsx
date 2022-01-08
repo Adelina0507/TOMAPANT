@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from "react";
 
+let timeout;
 
-export function RowForm({letter,round,player}) {
+export function RowForm({letter,round,player,seconds,onFinish,didStart,scores}) {
     const fields = {
         'country':'',
         'town':'',
@@ -15,44 +16,37 @@ export function RowForm({letter,round,player}) {
     const [done,setDone] = useState(false)
 
     useEffect(()=>{
-        setTimeout(()=>{
-            fetch('http://localhost:3001/round/?round=' + round).then(res=>res.json())
-                .then((data)=>{
-                    let scoreArr = {};
-                    data.forEach((row)=>{
-                        const tmp = {};
-                        Object.keys(fields).forEach((el)=>{
-                            tmp[el] = row[el]
-                        })
-                        scoreArr[row.player] = tmp
-                    })
-                    /***DE LUCRU**/
-                    Object.values(fields).forEach(item =>{
-                        let lastVal = null
-                        Object.keys(scoreArr).forEach(el=> {
-                            if(scoreArr[el][item] !== lastVal) {
-                                lastVal = scoreArr[el][item];
-                                scoreArr[el][item] = 10;
-                            } else {
-                                scoreArr[el][item] = 5;
-                            }
-                        })
-                    })
-                    console.log("SCORE",scoreArr)
-                }).catch((err)=>{
-                console.log(err)
-            })
-        },3000)
+        console.log(scores);
+    },[scores])
+    useEffect(()=>{
+        timeout = setTimeout(()=>{
+            console.log("TIMEDOUT");
+            onFinish(data);
+            clearTimeout(timeout)
+        },seconds * 1000)
+
     },[])
 
+    useEffect(()=>{
+        if(!didStart && done === false) {
+            setDone(true);
+            console.log("calledThis")
+            clearTimeout(timeout)
+            onFinish(data);
+        }
+    },[didStart])
+    let total = 0;
     return (
         <tr>
             <td>{letter}</td>
+
             {Object.keys(fields).map((el,index)=>{
+                total += !isNaN(scores[el]) ? scores[el] : 0;
+                console.log("Scores",scores);
                 return (
                     <td key={index}>
                         {done === true ?
-                            <strong>{data[el]}</strong>
+                            <strong>{data[el]}  {!isNaN(scores[el]) ? ":" +  scores[el] : ""}</strong>
                             :
                             <input type={"text"} value={data[el]} name={el}
                                    onChange={(event => {
@@ -65,25 +59,15 @@ export function RowForm({letter,round,player}) {
                 )
             }) }
             <td>
-                {done === true ? <strong>SCORE</strong>
-                    : <button onClick={(event)=> {
+                {done === true ? <strong>{total} pts</strong>
+                    : <button onClick={()=>{
                         setDone(true);
-                        const toSend = {
-                            round:round,
-                            player:player,
-                            ...data
-                        }
-                        fetch('http://localhost:3001/round',{
-                            method:'post',
-                            headers: {
-                                'Content-Type': 'application/json',
-                            },body:JSON.stringify(toSend)}).
-                        then((res)=>res.json()).then((data)=>{
+                        console.log('done');
+                        onFinish(data);
+                        clearTimeout(timeout);
+                    }
 
-                        }).catch((err)=>{
-                            console.log(err);
-                        })
-                    }}>Send</button>}
+                    }>Send</button> }
             </td>
         </tr>
     )
