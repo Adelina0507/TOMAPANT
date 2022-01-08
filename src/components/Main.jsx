@@ -147,17 +147,7 @@ export function Main() {
             </div>}
             {!start  ? (playerList.length === 2 ? <button style={{height: "50px", width:"100px", backgroundColor:"green", float:"left"}} onClick={handleJoinChat}>Start</button> : <span>Waiting for player</span>) :
                 <div>Round:{rows.length + 1} Time remaining: {sec} seconds</div>}
-            {/*<div className="grid-container">*/}
-            {/*    <div className="col-1">Ț</div>*/}
-            {/*    <div className="col-1">O</div>*/}
-            {/*    <div className="col-1">M</div>*/}
-            {/*    <div className="col-1">A</div>*/}
-            {/*    <div className="col-1">P</div>*/}
-            {/*    <div className="col-1">A</div>*/}
-            {/*    <div className="col-1">N</div>*/}
-            {/*    <div className="col-1">T</div>*/}
 
-            {/*</div>*/}
             <div className="grid-container">
                 <table>
                     <thead>
